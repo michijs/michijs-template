@@ -18,7 +18,7 @@
   "devDependencies": {
     "@lsegurado/eslint-config-ls-element": "0.0.3",
     "@lsegurado/ls-server": "0.0.7",
-    "@lsegurado/stylelint-config-ls-element": "^0.0.4",
+    "@lsegurado/stylelint-config-ls-element": "^0.0.2",
     "eslint": "^7.19.0",
     "husky": "^4.3.8",
     "stylelint": "^13.10.0",
