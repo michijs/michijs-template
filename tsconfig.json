@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+        "resolveJsonModule": true,
+        "checkJs": true,
+        "allowSyntheticDefaultImports": true,
+        "allowUnreachableCode": false,
+        "declaration": true,
+        "experimentalDecorators": true,
+        "lib": [
+            "dom",
+            "es2015"
+        ],
+        "outDir": "dist",
+        "moduleResolution": "node",
+        "module": "es2020",
+        "target": "es2019",
+        "baseUrl": "./src",
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "jsx": "react",
+        "jsxFactory": "h.createElement",
+        "jsxFragmentFactory": "h.Fragment"
+    },
+    "include": [
+        "src"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
