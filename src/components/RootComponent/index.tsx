@@ -1,16 +1,16 @@
-import { AutonomousCustomElement, h, LSCustomElement } from '@lsegurado/ls-element';
-import Counter from '../Counter';
+import { createCustomElement } from '@lsegurado/ls-element';
+import { MyCounter } from '../Counter';
 
-@AutonomousCustomElement()
-export class MyRootComponent extends HTMLElement implements LSCustomElement {
-
-  onCountChanged(ev: CustomEvent<number>){
-    console.log(`New count value: ${ev.detail}`);
-  }
-
+createCustomElement('my-root-element', {
+  shadow: false,
+  methods: {
+    onCountChanged(ev: CustomEvent<number>){
+      console.log(`New count value: ${ev.detail}`);
+    }
+  },
   render() {
     return (
-      <Counter id="my-counter" oncountchanged={this.onCountChanged} />
+      <MyCounter id="my-counter" oncountchanged={this.onCountChanged} />
     );
   }
-}
+});

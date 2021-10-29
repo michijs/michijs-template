@@ -9,24 +9,23 @@
     "build": "ls-server --build",
     "publish-patch-version": "npm version patch && npm run publish-npm",
     "publish-npm": "npm run dist && npm publish --access public",
-    "lint": "eslint --fix src/**/*{.ts,.tsx}",
-    "stylelint": "npx stylelint --fix **/*.css",
     "sandbox": "npm install && npm run start"
   },
   "keywords": [
     "web-components"
   ],
   "devDependencies": {
-    "@lsegurado/eslint-config-ls-element": "0.0.3",
-    "@lsegurado/ls-server": "^0.0.15",
+    "@lsegurado/eslint-config-ls-element": "0.0.7",
+    "@lsegurado/ls-server": "0.0.23",
     "@lsegurado/stylelint-config-ls-element": "^0.0.2",
     "eslint": "^7.19.0",
-    "husky": "^4.3.8",
-    "stylelint": "^13.10.0",
-    "typescript": "^4.1.2"
+    "lint-staged": "^10.5.4",
+    "simple-git-hooks": "^2.2.0",
+    "stylelint": "^13.8.0",
+    "typescript": "^4.4.4"
   },
   "dependencies": {
-    "@lsegurado/ls-element": "^1.2.6"
+    "@lsegurado/ls-element": "2.0.2"
   },
   "eslintConfig": {
     "extends": "@lsegurado/eslint-config-ls-element"
@@ -34,9 +33,11 @@
   "stylelint": {
     "extends": "@lsegurado/stylelint-config-ls-element"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint && npm run stylelint"
-    }
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": "eslint --cache --fix",
+    "*.css": "stylelint --fix"
   }
 }
