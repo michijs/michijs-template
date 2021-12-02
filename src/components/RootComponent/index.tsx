@@ -1,7 +1,7 @@
 import { createCustomElement } from '@lsegurado/ls-element';
 import { MyCounter } from '../Counter';
 
-createCustomElement('my-root-element', {
+createCustomElement('my-root-component', {
   shadow: false,
   methods: {
     onCountChanged(ev: CustomEvent<number>){
@@ -10,7 +10,7 @@ createCustomElement('my-root-element', {
   },
   render() {
     return (
-      <MyCounter id="my-counter" oncountchanged={this.onCountChanged} />
+      <MyCounter oncountchanged={this.onCountChanged} />
     );
   }
 });

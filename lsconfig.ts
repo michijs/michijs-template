@@ -7,6 +7,9 @@ export const config: LsServerConfig = () => {
       inject: ['node_modules/@lsegurado/ls-element/dist/index.js'],
       jsxFactory: 'h.createElement',
       jsxFragment: 'h.Fragment'
+    },
+    public: {
+      serviceWorkerName: 'service-worker.js'
     }
   };
 };

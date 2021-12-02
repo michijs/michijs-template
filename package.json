@@ -2,7 +2,7 @@
   "name": "@lsegurado/ls-element-template",
   "license": "MIT",
   "version": "0.0.1",
-  "description": "Template for ls-element library",
+  "description": "Template for LS-Element library",
   "scripts": {
     "start": "ls-server --start",
     "dist": "ls-server --dist",
@@ -15,17 +15,18 @@
     "web-components"
   ],
   "devDependencies": {
-    "@lsegurado/eslint-config-ls-element": "0.0.7",
-    "@lsegurado/ls-server": "0.0.23",
+    "@lsegurado/eslint-config-ls-element": "0.1.0",
+    "@lsegurado/ls-server": "0.0.26",
     "@lsegurado/stylelint-config-ls-element": "^0.0.2",
+    "@types/node": "^16.11.9",
     "eslint": "^7.19.0",
     "lint-staged": "^10.5.4",
     "simple-git-hooks": "^2.2.0",
     "stylelint": "^13.8.0",
-    "typescript": "^4.4.4"
+    "typescript": "^4.5.2"
   },
   "dependencies": {
-    "@lsegurado/ls-element": "2.0.2"
+    "@lsegurado/ls-element": "2.1.6"
   },
   "eslintConfig": {
     "extends": "@lsegurado/eslint-config-ls-element"

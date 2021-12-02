@@ -1,0 +1,25 @@
+{
+    "name": "LS Element",
+    "short_name": "LS Element",
+    "description": "Template for LS-Element library",
+    "theme_color": "#24282f",
+    "background_color": "#24282f",
+    "display": "standalone",
+    "orientation": "portrait",
+    "start_url": "/",
+    "scope": ".",
+    "icons": [
+        {
+            "src": "/icon.svg", 
+            "sizes": "24x24 48x48 72x72 96x96 128x128 256x256", 
+            "type": "image/svg+xml", 
+            "purpose": "any maskable" 
+        },
+        {
+            "src": "/splash-screen.png", 
+            "sizes": "512x512", 
+            "type": "image/png", 
+            "purpose": "any maskable" 
+        }
+    ]
+}

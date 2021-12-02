@@ -1,0 +1,15 @@
+<svg fill="white" style="background-color: rgb(36,40,47)" viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500');
+        text {
+            text-shadow: 1px 1px 0px black;
+            font-size: 50px;
+            font-family: 'Roboto', Futura, 'Trebuchet MS', Arial, sans-serif;
+            font-weight: 700;
+            alignment-baseline: central;
+        }
+    </style>
+    <text x="50%" y="50%" alignment-baseline="middle" text-anchor="middle" textLength="100%" lengthAdjust="spacingAndGlyphs">
+        &lt;ls/&gt;
+    </text>
+</svg>
