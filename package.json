@@ -26,7 +26,7 @@
     "typescript": "^4.5.2"
   },
   "dependencies": {
-    "@lsegurado/ls-element": "2.1.7"
+    "@lsegurado/ls-element": "2.1.9"
   },
   "eslintConfig": {
     "extends": "@lsegurado/eslint-config-ls-element"
