@@ -1,7 +1,7 @@
 {
-    "name": "LS Element",
-    "short_name": "LS Element",
-    "description": "Template for LS-Element library",
+    "name": "MichiJS",
+    "short_name": "MichiJS",
+    "description": "Template for MichiJS library",
     "theme_color": "#24282f",
     "background_color": "#24282f",
     "display": "standalone",

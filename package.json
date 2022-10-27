@@ -1,38 +1,40 @@
 {
-  "name": "@lsegurado/ls-element-template",
+  "name": "@michijs/michijs-template",
   "license": "MIT",
   "version": "0.0.1",
-  "description": "Template for LS-Element library",
+  "description": "Template for MichiJS library",
   "scripts": {
-    "start": "ls-server --start",
-    "dist": "ls-server --dist",
-    "build": "ls-server --build",
+    "start": "michi-server --start",
+    "dist": "michi-server --dist",
+    "build": "michi-server --build",
     "publish-patch-version": "npm version patch && npm run publish-npm",
     "publish-npm": "npm run dist && npm publish --access public",
     "sandbox": "npm install && npm run start"
   },
   "keywords": [
-    "web-components"
+    "web-components",
+    "michijs"
   ],
   "devDependencies": {
-    "@lsegurado/eslint-config-ls-element": "0.1.0",
-    "@lsegurado/ls-server": "0.0.29",
-    "@lsegurado/stylelint-config-ls-element": "^0.0.2",
+    "@michijs/eslint-config": "0.1.0",
+    "@michijs/server": "0.0.32",
+    "@michijs/stylelint-config": "^0.1.0",
     "@types/node": "^16.11.9",
     "eslint": "^7.19.0",
+    "jest": "^29.2.2",
     "lint-staged": "^10.5.4",
     "simple-git-hooks": "^2.2.0",
     "stylelint": "^13.8.0",
-    "typescript": "^4.5.2"
+    "typescript": "^4.8.4"
   },
   "dependencies": {
-    "@lsegurado/ls-element": "2.1.9"
+    "@michijs/michijs": "1.0.0-rc-1"
   },
   "eslintConfig": {
-    "extends": "@lsegurado/eslint-config-ls-element"
+    "extends": "@michijs/eslint-config"
   },
   "stylelint": {
-    "extends": "@lsegurado/stylelint-config-ls-element"
+    "extends": "@michijs/stylelint-config"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"

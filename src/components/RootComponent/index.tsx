@@ -1,4 +1,4 @@
-import { createCustomElement } from '@lsegurado/ls-element';
+import { createCustomElement } from '@michijs/michijs';
 import { MyCounter } from '../Counter';
 
 createCustomElement('my-root-component', {
