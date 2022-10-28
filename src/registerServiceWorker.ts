@@ -1,4 +1,4 @@
-if ('serviceWorker' in navigator && process.env.NODE_ENV !== 'DEVELOPMENT')
+if ('serviceWorker' in navigator && process.env.NODE_ENV !== 'DEVELOPMENT') {
   window.addEventListener('load', async () => {
     // register the service worker from the file specified
     const registration = await navigator.serviceWorker.register('/service-worker.js');
@@ -27,4 +27,5 @@ if ('serviceWorker' in navigator && process.env.NODE_ENV !== 'DEVELOPMENT')
         });
       }
     });
-  });
+  }); 
+}
