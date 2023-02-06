@@ -1,13 +1,7 @@
 import './components/RootComponent';
 import './registerServiceWorker';
+import type { ProcessType } from '@michijs/dev-server';
 
 declare global {
-    interface Process {
-        env: {
-            NODE_ENV: string;
-            BUILD_FILES: string[];
-            CACHE_NAME: string;
-        };
-    }
-    var process: Process;
+  var process: ProcessType;
 }

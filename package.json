@@ -7,9 +7,9 @@
     "start": "michi-server --start",
     "dist": "michi-server --dist",
     "build": "michi-server --build",
-    "publish-patch-version": "npm version patch && npm run publish-npm",
     "publish-npm": "npm run dist && npm publish --access public",
     "lint": "rome check --apply-suggested .",
+    "test-tsc": "tsc --noEmit --skipLibCheck",
     "sandbox": "npm install && npm run start"
   },
   "keywords": [
@@ -17,14 +17,14 @@
     "michijs"
   ],
   "devDependencies": {
-    "@michijs/server": "0.0.34",
-    "lint-staged": "^10.5.4",
-    "simple-git-hooks": "^2.2.0",
-    "rome": "^0.10.1-next",
-    "typescript": "^4.8.4"
+    "@michijs/dev-server": "0.2.0",
+    "lint-staged": "13.1.0",
+    "simple-git-hooks": "2.8.1",
+    "rome": "11.0.0",
+    "typescript": "4.9.4"
   },
   "dependencies": {
-    "@michijs/michijs": "1.0.0-rc-3"
+    "@michijs/michijs": "1.0.1"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
