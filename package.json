@@ -21,7 +21,7 @@
     "lint-staged": "13.1.0",
     "simple-git-hooks": "2.8.1",
     "rome": "11.0.0",
-    "typescript": "4.9.4"
+    "typescript": "4.9.5"
   },
   "dependencies": {
     "@michijs/michijs": "1.0.4"
