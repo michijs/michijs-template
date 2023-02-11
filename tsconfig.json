@@ -8,7 +8,7 @@
     "checkJs": true,
     "allowSyntheticDefaultImports": true,
     "allowUnreachableCode": false,
-    "declaration": true,
+    "declaration": false,
     "experimentalDecorators": true,
     "noErrorTruncation": true,
     "incremental": true,
