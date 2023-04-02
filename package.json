@@ -8,7 +8,6 @@
     "dist": "michi-server --dist",
     "build": "michi-server --build",
     "publish-npm": "npm run dist && npm publish --access public",
-    "lint": "rome check --apply-suggested .",
     "test-tsc": "tsc --noEmit --skipLibCheck",
     "sandbox": "npm install && npm run start"
   },
@@ -30,6 +29,9 @@
     "pre-commit": "npx lint-staged"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": "rome check --apply-suggested"
+    "*.{js,jsx,ts,tsx}": [
+      "rome check --apply",
+      "rome format --write"
+    ]
   }
 }
