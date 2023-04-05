@@ -23,7 +23,7 @@
     "typescript": "5.0.3"
   },
   "dependencies": {
-    "@michijs/michijs": "1.1.4"
+    "@michijs/michijs": "1.1.6"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
