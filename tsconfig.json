@@ -16,6 +16,7 @@
       "dom",
       "ES2021"
     ],
+    "baseUrl": "./src",
     "outDir": "dist",
     "moduleResolution": "node",
     "module": "esnext",
