@@ -17,7 +17,7 @@
     "michijs"
   ],
   "devDependencies": {
-    "@michijs/dev-server": "0.3.2",
+    "@michijs/dev-server": "0.4.2",
     "lint-staged": "13.2.2",
     "simple-git-hooks": "2.8.1",
     "rome": "12.1.0",
