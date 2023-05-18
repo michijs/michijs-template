@@ -1,14 +1,14 @@
 /// <reference no-default-lib="true"/>
 /// <reference lib="esNext" />
 /// <reference lib="WebWorker" />
-import type { ProcessSWType } from '@michijs/dev-server';
+import type { MichiProcessType } from '@michijs/dev-server';
 
 const sw = self as ServiceWorkerGlobalScope & typeof globalThis;
 
-declare let process: ProcessSWType;
+declare const michiProcess: MichiProcessType;
 
-const buildFiles = process.env.BUILD_FILES;
-const cacheName = process.env.CACHE_NAME;
+const buildFiles = michiProcess.env.BUILD_FILES;
+const cacheName = michiProcess.env.CACHE_NAME;
 
 const expectedCaches = [cacheName];
 
