@@ -18,21 +18,9 @@
   ],
   "devDependencies": {
     "@michijs/dev-server": "0.4.2",
-    "lint-staged": "13.2.2",
-    "simple-git-hooks": "2.8.1",
-    "rome": "12.1.0",
     "typescript": "5.0.4"
   },
   "dependencies": {
     "@michijs/michijs": "1.1.7"
-  },
-  "simple-git-hooks": {
-    "pre-commit": "npx lint-staged"
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "rome check --apply",
-      "rome format --write"
-    ]
   }
 }
