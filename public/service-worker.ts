@@ -1,7 +1,7 @@
 /// <reference no-default-lib="true"/>
 /// <reference lib="esNext" />
 /// <reference lib="WebWorker" />
-import type { MichiProcessType } from '@michijs/dev-server';
+import type { MichiProcessType } from "@michijs/dev-server";
 
 const sw = self as ServiceWorkerGlobalScope & typeof globalThis;
 
@@ -33,15 +33,15 @@ const getFromCacheOrFetch = async (e: FetchEvent) => {
 };
 
 // Cache, falling back to network strategy
-sw.addEventListener('install', (e) => {
+sw.addEventListener("install", (e) => {
   sw.skipWaiting();
   e.waitUntil(storeBuildFilesIntoCache());
 });
 
-sw.addEventListener('activate', (e) => {
+sw.addEventListener("activate", (e) => {
   e.waitUntil(controlPageAndClean());
 });
 
-sw.addEventListener('fetch', (e) => {
+sw.addEventListener("fetch", (e) => {
   e.respondWith(getFromCacheOrFetch(e));
 });

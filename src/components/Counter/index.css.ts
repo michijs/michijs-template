@@ -1,4 +1,4 @@
-import { css } from '@michijs/michijs';
+import { css } from "@michijs/michijs";
 
 export const style = css`
 :host {

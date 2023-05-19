@@ -1,22 +1,26 @@
-import { createCustomElement, EventDispatcher } from '@michijs/michijs';
-import { style } from './index.css';
+import { createCustomElement, EventDispatcher } from "@michijs/michijs";
+import { style } from "./index.css";
 
-export const MyCounter = createCustomElement('my-counter', {
+export const MyCounter = createCustomElement("my-counter", {
   reflectedAttributes: {
-    count: 0
+    count: 0,
   },
   methods: {
-    decrementCount() { this.count--; },
-    incrementCount() { this.count++; },
+    decrementCount() {
+      this.count--;
+    },
+    incrementCount() {
+      this.count++;
+    },
   },
   events: {
-    countChanged: new EventDispatcher<number>()
+    countChanged: new EventDispatcher<number>(),
   },
   adoptedStyleSheets: [style],
   observe: {
     count() {
       this.countChanged(this.count);
-    }
+    },
   },
   render() {
     return (
@@ -26,5 +30,5 @@ export const MyCounter = createCustomElement('my-counter', {
         <button onpointerup={this.incrementCount}>+</button>
       </>
     );
-  }
+  },
 });

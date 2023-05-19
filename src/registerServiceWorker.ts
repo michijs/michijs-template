@@ -1,11 +1,11 @@
 if (
-  'serviceWorker' in navigator &&
-  michiProcess.env.NODE_ENV !== 'DEVELOPMENT'
+  "serviceWorker" in navigator &&
+  michiProcess.env.NODE_ENV !== "DEVELOPMENT"
 ) {
-  window.addEventListener('load', async () => {
+  window.addEventListener("load", async () => {
     // register the service worker from the file specified
     const registration = await navigator.serviceWorker.register(
-      '/service-worker.js',
+      "/service-worker.js",
     );
 
     // ensure the case when the updatefound event was missed is also handled
@@ -15,10 +15,10 @@ if (
     }
 
     // detect Service Worker update available and wait for it to become installed
-    registration.addEventListener('updatefound', () => {
+    registration.addEventListener("updatefound", () => {
       if (registration.installing) {
         // wait until the new Service worker is actually installed (ready to take over)
-        registration.installing.addEventListener('statechange', () => {
+        registration.installing.addEventListener("statechange", () => {
           if (registration.waiting) {
             // if there's an existing controller (previous Service Worker), show the prompt
             if (navigator.serviceWorker.controller) {
