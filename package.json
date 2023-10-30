@@ -2,6 +2,10 @@
   "name": "@michijs/michijs-template",
   "license": "MIT",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/michijs/michijs-template.git"
+  },
   "description": "Template for MichiJS library",
   "scripts": {
     "start": "michi-server --start",
