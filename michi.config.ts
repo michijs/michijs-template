@@ -1,4 +1,4 @@
-import { ServerConfigFactory } from "@michijs/dev-server";
+import type { ServerConfigFactory } from "@michijs/dev-server";
 
 const icons = [24, 48, 72, 96, 128, 256, 512].map((x) => ({
   src: `/assets/generated/icon-${x}.webp`,
