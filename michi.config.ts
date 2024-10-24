@@ -1,12 +1,6 @@
-import { ServerConfigFactory } from "@michijs/dev-server";
+import type { ServerConfigFactory } from "@michijs/dev-server";
 
-const icons = [24, 48, 72, 96, 128, 256, 512].map((x) => ({
-  src: `/assets/generated/icon-${x}.webp`,
-  sizes: `${x}x${x}`,
-  type: "image/webp",
-}));
-
-export const config: ServerConfigFactory = () => ({
+export const config: ServerConfigFactory = ({ icons }) => ({
   public: {
     manifest: {
       options: {

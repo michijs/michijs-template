@@ -1,7 +1,7 @@
 import { createCustomElement } from "@michijs/michijs";
 import { MyCounter } from "../Counter";
 
-createCustomElement("my-root-component", {
+createCustomElement("root-component", {
   shadow: false,
   methods: {
     onCountChanged(ev: CustomEvent<number>) {
