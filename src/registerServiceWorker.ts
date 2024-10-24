@@ -1,7 +1,10 @@
 import { trustedTypePolicy } from "@michijs/michijs";
 
 export const registerServiceWorker = async (): Promise<void> => {
-  if (michiProcess.env.NODE_ENV !== "DEVELOPMENT" && "serviceWorker" in navigator) {
+  if (
+    michiProcess.env.NODE_ENV !== "DEVELOPMENT" &&
+    "serviceWorker" in navigator
+  ) {
     // Doesnt work properly on android - only on web
     // register the service worker from the file specified
     const registration = await navigator.serviceWorker.register(
