@@ -12,13 +12,16 @@ const cacheName = michiProcess.env.CACHE_NAME;
 
 const expectedCaches = [cacheName];
 
+function urlsToRequests(urls: string[]): Request[] {
+  return urls.map((url) => new Request(url, { cache: "no-cache" }));
+}
+
 const storeBuildFilesIntoCache = async () => {
   const cache = await caches.open(cacheName);
-  return await cache.addAll(buildFiles);
+  return await cache.addAll(urlsToRequests(buildFiles));
 };
 
 const controlPageAndClean = async () => {
-  sw.clients.claim();
   const cacheNames = await caches.keys();
   return await Promise.all(
     cacheNames.map((x) =>
@@ -28,20 +31,28 @@ const controlPageAndClean = async () => {
 };
 
 const getFromCacheOrFetch = async (e: FetchEvent) => {
+  if (e.request.method !== "GET") {
+    return fetch(e.request);
+  }
   const response = await caches.match(e.request);
   return response || fetch(e.request);
 };
 
 // Cache, falling back to network strategy
 sw.addEventListener("install", (e) => {
-  sw.skipWaiting();
   e.waitUntil(storeBuildFilesIntoCache());
+  sw.skipWaiting();
 });
 
 sw.addEventListener("activate", (e) => {
+  sw.clients.claim();
   e.waitUntil(controlPageAndClean());
 });
 
 sw.addEventListener("fetch", (e) => {
   e.respondWith(getFromCacheOrFetch(e));
+});
+
+sw.addEventListener("message", (event) => {
+  if (event.data && event.data.type === "SKIP_WAITING") sw.skipWaiting();
 });
