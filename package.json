@@ -21,10 +21,10 @@
   ],
   "devDependencies": {
     "@michijs/tsconfig": "0.0.4",
-    "@michijs/dev-server": "0.7.22",
+    "@michijs/dev-server": "0.7.24",
     "typescript": "5.7.2"
   },
   "dependencies": {
-    "@michijs/michijs": "2.0.8"
+    "@michijs/michijs": "2.1.0"
   }
 }
