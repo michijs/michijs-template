@@ -26,6 +26,6 @@
   },
   "dependencies": {
     "@michijs/default-service-worker": "0.0.4",
-    "@michijs/michijs": "2.1.10"
+    "@michijs/michijs": "2.1.12"
   }
 }
