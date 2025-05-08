@@ -25,7 +25,7 @@
     "typescript": "5.8.3"
   },
   "dependencies": {
-    "@michijs/default-service-worker": "0.0.4",
+    "@michijs/default-service-worker": "0.0.5",
     "@michijs/michijs": "2.1.17"
   }
 }
