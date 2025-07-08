@@ -21,7 +21,7 @@
   ],
   "devDependencies": {
     "@michijs/tsconfig": "0.0.5",
-    "@michijs/dev-server": "0.8.5",
+    "@michijs/dev-server": "0.8.6",
     "typescript": "5.8.3"
   },
   "dependencies": {
