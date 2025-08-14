@@ -20,11 +20,6 @@ on:
       release-notes-path:
         description: "Release notes path"
         type: string
-  workflow_run:
-    workflows: ["Tests"]
-    branches: [master]
-    types:
-      - completed
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
