@@ -2,7 +2,7 @@ import type {
   ServerConfigFactory,
 } from "@michijs/dev-server";
 
-const config: ServerConfigFactory = ({ icons }) => {
+const config: ServerConfigFactory = ({ icons }) => ({
   public: {
     manifest: {
       options: {
