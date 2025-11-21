@@ -1,6 +1,4 @@
-import type {
-  ServerConfigFactory,
-} from "@michijs/dev-server";
+import type { ServerConfigFactory } from "@michijs/dev-server";
 
 const config: ServerConfigFactory = ({ icons }) => ({
   public: {
