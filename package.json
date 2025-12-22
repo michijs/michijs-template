@@ -20,13 +20,13 @@
     "michijs"
   ],
   "devDependencies": {
-    "@michijs/dev-server": "0.8.7",
-    "@michijs/shared-configs": "0.0.24",
+    "@michijs/dev-server": "0.8.12",
+    "@michijs/shared-configs": "0.0.34",
     "@michijs/tsconfig": "0.0.5",
-    "typescript": "5.9.2"
+    "typescript": "5.9.3"
   },
   "dependencies": {
     "@michijs/default-service-worker": "0.0.5",
-    "@michijs/michijs": "2.3.25"
+    "@michijs/michijs": "2.3.34"
   }
 }
