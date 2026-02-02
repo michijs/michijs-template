@@ -20,7 +20,7 @@
     "michijs"
   ],
   "devDependencies": {
-    "@michijs/dev-server": "0.8.13",
+    "@michijs/dev-server": "0.8.14",
     "@michijs/shared-configs": "0.0.36",
     "@michijs/tsconfig": "0.0.5",
     "typescript": "5.9.3"
