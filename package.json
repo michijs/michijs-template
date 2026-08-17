@@ -20,10 +20,10 @@
     "michijs"
   ],
   "devDependencies": {
-    "@michijs/dev-server": "0.8.28",
-    "@michijs/shared-configs": "0.0.36",
+    "@michijs/dev-server": "0.8.34",
+    "@michijs/shared-configs": "0.0.37",
     "@michijs/tsconfig": "0.0.5",
-    "typescript": "5.9.3"
+    "typescript": "7.0.2"
   },
   "dependencies": {
     "@michijs/default-service-worker": "0.0.5",
